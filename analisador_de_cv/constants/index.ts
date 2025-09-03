@@ -1,3 +1,5 @@
+import type { Curriculo } from "types";
+
 export const curriculos: Curriculo[]=[
  {
     id: "1",

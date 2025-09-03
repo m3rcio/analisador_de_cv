@@ -3,6 +3,7 @@ import type { Route } from "./+types/home";
 import { callbackify } from "util";
 import CurriculoCard from "~/components/CurriculoCard";
 import { curriculos } from "constants";
+import type { Curriculo } from "types";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Analisador de CV" },
@@ -22,7 +23,7 @@ export default function Home() {
     </section>
     {curriculos.length > 0 && (
       <div className="resumes-section">
-        { curriculos.map((curriculo)=>(
+        { curriculos.map((curriculo: Curriculo)=>(
       <CurriculoCard key={curriculo.id} curriculo={curriculo}/>
     ))
     }

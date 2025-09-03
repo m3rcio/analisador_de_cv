@@ -1,8 +1,8 @@
 import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
-import { curriculos } from "constants";
 import { callbackify } from "util";
 import CurriculoCard from "~/components/CurriculoCard";
+import { curriculos } from "constants";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Analisador de CV" },

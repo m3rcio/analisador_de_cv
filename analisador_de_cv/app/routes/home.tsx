@@ -1,3 +1,4 @@
+import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
 export function meta({}: Route.MetaArgs) {
   return [
@@ -7,5 +8,14 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <main></main>;
+  
+  return <main className="bg-[url('/imagens/bg-main.svg')] bg-cover">
+    <Navbar/>
+    <section className="main-section">
+        <div className="page-heading">
+            <h1>acompanhe sua aplicação e avaliação de currículo</h1>
+            <h2>revise suas submissões e verifique o feedback impulsionado por IA</h2>
+        </div>
+    </section>
+  </main>;
 }

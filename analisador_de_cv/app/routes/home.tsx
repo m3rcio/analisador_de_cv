@@ -17,5 +17,11 @@ export default function Home() {
             <h2>revise suas submissões e verifique o feedback impulsionado por IA</h2>
         </div>
     </section>
+    {[
+        {
+          titulo:'', capa:''
+        }
+    ]
+    }
   </main>;
 }

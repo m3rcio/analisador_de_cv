@@ -2,7 +2,7 @@ import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
 import { callbackify } from "util";
 import CurriculoCard from "~/components/CurriculoCard";
-import { curriculos } from "constants";
+import { curriculos } from "../../constants";
 import type { Curriculo } from "types";
 export function meta({}: Route.MetaArgs) {
   return [

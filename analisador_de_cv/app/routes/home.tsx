@@ -1,6 +1,5 @@
 import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
-import { callbackify } from "util";
 import CurriculoCard from "~/components/CurriculoCard";
 import { curriculos } from "../../constants";
 import type { Curriculo } from "types";
@@ -16,12 +15,11 @@ export default function Home() {
   return <main className="bg-[url('/imagens/bg-main.svg')] bg-cover">
     <Navbar/>
     <section className="main-section">
-        <div className="page-heading">
+        <div className="page-heading py-16">
             <h1>acompanhe sua aplicação e avaliação de currículo</h1>
             <h2>revise suas submissões e verifique o feedback impulsionado por IA</h2>
         </div>
-    </section>
-    {curriculos.length > 0 && (
+         {curriculos.length > 0 && (
       <div className="resumes-section">
         { curriculos.map((curriculo: Curriculo)=>(
       <CurriculoCard key={curriculo.id} curriculo={curriculo}/>
@@ -29,6 +27,8 @@ export default function Home() {
     }
       </div>
     )}
+    </section>
+   
     
   </main>;
 }

@@ -5,7 +5,7 @@ export const curriculos: Curriculo[]=[
     id: "1",
     companyName: "Google",
     jobTitle: "Desenvolvedor Frontend",
-    imagePath: "/images/resume-1.png",
+    imagePath: "/imagens/resume_01.png",
     resumePath: "/resumes/resume-1.pdf",
     feedback: {
       overallScore: 85,
@@ -35,7 +35,7 @@ export const curriculos: Curriculo[]=[
     id: "2",
     companyName: "Microsoft",
     jobTitle: "Cloud Engineer",
-    imagePath: "/images/resume-2.png",
+    imagePath: "/imagens/resume_02.png",
     resumePath: "/resumes/resume-2.pdf",
     feedback: {
       overallScore: 55,
@@ -65,7 +65,37 @@ export const curriculos: Curriculo[]=[
     id: "3",
     companyName: "Apple",
     jobTitle: "Desenvolvedor iOS",
-    imagePath: "/images/resume-3.png",
+    imagePath: "/imagens/resume_03.png",
+    resumePath: "/resumes/resume-3.pdf",
+    feedback: {
+      overallScore: 75,
+      ATS: {
+        score: 90,
+        tips: [],
+      },
+      toneAndStyle: {
+        score: 90,
+        tips: [],
+      },
+      content: {
+        score: 90,
+        tips: [],
+      },
+      structure: {
+        score: 90,
+        tips: [],
+      },
+      skills: {
+        score: 90,
+        tips: [],
+      },
+    },
+  },
+  {
+    id: "4",
+    companyName: "Apple",
+    jobTitle: "Desenvolvedor iOS",
+    imagePath: "/imagens/resume_03.png",
     resumePath: "/resumes/resume-3.pdf",
     feedback: {
       overallScore: 75,

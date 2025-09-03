@@ -2,7 +2,7 @@ import { Link } from "react-router"
 import type { Curriculo } from "types"
 import ScoreCircle from "./ScoreCircle"
 
-const CurriculoCard  = ({curriculo: {id,jobTitle,companyName,feedback}}: {curriculo:Curriculo}) =>{
+const CurriculoCard  = ({curriculo: {id,jobTitle,companyName,feedback,imagePath}}: {curriculo:Curriculo}) =>{
     return (
         <Link to={`/curriculo/${id}`} className="resume-card animate-in fade-in duration-1000">
             <div className="resume-card-header">
@@ -17,6 +17,11 @@ const CurriculoCard  = ({curriculo: {id,jobTitle,companyName,feedback}}: {curric
             <div className="flex-shrink-0">
                 <ScoreCircle score={feedback.overallScore}/>
             </div>
+            </div>
+            <div className="gradient-border animate-in fade-in duration-1000">
+                    <div className="w-full h-full">
+                        <img src={imagePath} alt="curriculo" className="w-full h-[350px] max-sm:h-[200px] object-cover object-top" />
+                    </div>
             </div>
         </Link>
     )

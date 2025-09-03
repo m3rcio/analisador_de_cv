@@ -1,5 +1,8 @@
 import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
+import { curriculos } from "constants";
+import { callbackify } from "util";
+import CurriculoCard from "~/components/CurriculoCard";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Analisador de CV" },
@@ -17,11 +20,14 @@ export default function Home() {
             <h2>revise suas submissões e verifique o feedback impulsionado por IA</h2>
         </div>
     </section>
-    {[
-        {
-          titulo:'', capa:''
-        }
-    ]
+    {curriculos.length > 0 && (
+      <div className="resumes-section">
+        { curriculos.map((curriculo)=>(
+      <CurriculoCard key={curriculo.id} curriculo={curriculo}/>
+    ))
     }
+      </div>
+    )}
+    
   </main>;
 }

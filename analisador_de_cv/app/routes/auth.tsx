@@ -1,7 +1,12 @@
-import {type RouteConfig, index, route } from "@react-router/dev/routes";
+import { title } from "process";
 
-export default[
+export const meta =()=>([
+    {title: 'Analisador de CV | Auth'},
+    {name: 'descrição', content: 'Entre na sua conta'},
+])
 
-    index(file: "routes/home.tsx"),
+const Auth=()=>{
+    return (<div>Auth</div>)
+}
 
-]
+export default Auth

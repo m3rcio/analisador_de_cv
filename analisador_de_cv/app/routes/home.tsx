@@ -3,6 +3,9 @@ import type { Route } from "./+types/home";
 import CurriculoCard from "~/components/CurriculoCard";
 import { curriculos } from "../../constants";
 import type { Curriculo } from "types";
+import { usePuterStore } from "~/lib/puter";
+import { useLocation, useNavigate } from "react-router";
+import { useEffect } from "react";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Analisador de CV" },
@@ -11,7 +14,13 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  
+   const {auth}=usePuterStore();
+    const navigate=useNavigate();
+
+
+    useEffect(()=>{
+        if(auth.isAuthenticated) navigate('/auth?next=/')
+    },[auth.isAuthenticated])
   return <main className="bg-[url('/imagens/bg-main.svg')] bg-cover">
     <Navbar/>
     <section className="main-section">

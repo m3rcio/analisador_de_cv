@@ -16,6 +16,17 @@ const Auth=()=>{
                         <h1>Bem Vindo(a)</h1>
                         <h2>Entre para continuar a sua Jornada Laboral</h2>
                     </div>
+                    <div>
+                        {isLoading ? (
+                            <button className="auth-button animate-pulse">
+                                <p>Entrando...</p>
+                            </button>
+                        ) : (<>
+                        {auth.isAuthenticated ? (
+                            <button className="auth-button" onClick={auth.signOut}><p>Sair</p></button>
+                        ) : (<button className="auth-button" onClick={auth.signOut}><p>Entre</p></button>)}
+                        </>)}
+                    </div>
                 </section>
             </div>
         </main>

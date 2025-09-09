@@ -1,4 +1,5 @@
 import { title } from "process";
+import { usePuterStore } from "~/lib/puter";
 
 export const meta =()=>([
     {title: 'Analisador de CV | Auth'},
@@ -6,6 +7,7 @@ export const meta =()=>([
 ])
 
 const Auth=()=>{
+    const {isLoading,auth}=usePuterStore();
     return (
         <main className="bg-[url('/imagens/bg-auth.svg')] bg-cover min-h-screen flex items-center justify-center ">
             <div className="gradient-border shadow-lg">

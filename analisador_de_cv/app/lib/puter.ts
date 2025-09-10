@@ -119,6 +119,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
   const checkAuthStatus = async (): Promise<boolean> => {
     const puter = getPuter();
     if (!puter) {
+      set({ isLoading: false }); // teste...
       setError("Puter.js not available");
       return false;
     }
@@ -162,7 +163,9 @@ export const usePuterStore = create<PuterStore>((set, get) => {
         err instanceof Error ? err.message : "Failed to check auth status";
       setError(msg);
       return false;
-    }
+    } finally { // teste...
+    set({ isLoading: false }); 
+  }
   };
 
   const signIn = async (): Promise<void> => {
@@ -261,6 +264,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
       clearInterval(interval);
       if (!getPuter()) {
         setError("Puter.js failed to load within 10 seconds");
+        set({ isLoading: false }); //teste...
       }
     }, 10000);
   };

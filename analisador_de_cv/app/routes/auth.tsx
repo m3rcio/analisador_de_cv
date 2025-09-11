@@ -24,7 +24,7 @@ const Auth=()=>{
                 <section className="flex flex-col gap-8 bg-white rounded-2xl p-10">
                     <div className="flex flex-col items-center gap-2 text-center">
                         <h1>Bem Vindo(a)</h1>
-                        <h2>Entre para continuar a sua Jornada Laboral</h2>
+                        <h2>Entre para continuar a sua Jornada Laboralunuinuiniu</h2>
                     </div>
                     <div>
                         {isLoading ? (

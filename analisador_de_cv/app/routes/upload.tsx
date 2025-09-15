@@ -1,8 +1,12 @@
 import React from 'react';
+import Navbar from "~/components/Navbar";
 
 const Upload=()=>{
     return(
-        <div></div>
+        <main className="bg-[url('/imagens/bg-main.svg')] bg-cover">
+    <Navbar/>
+    <section className="main-section"></section>
+    </main>
     )
 }
 

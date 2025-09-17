@@ -1,11 +1,12 @@
 import React from 'react';
 import {useState} from 'react';
 import Navbar from "~/components/Navbar";
+import FileUploader from "~/components/FileUploader";
 
 const Upload=()=>{
 const [isProcessing,setIsProcessing]= useState();
 const [statusText,setStatusText]= useState('');
-handleSubmit=(e: FormEvent<HTMLFormElement>)=>{}
+const handleSubmit=(e: FormEvent<HTMLFormElement>)=>{}
 
     return(
         <main className="bg-[url('/imagens/bg-main.svg')] bg-cover">
@@ -39,7 +40,7 @@ handleSubmit=(e: FormEvent<HTMLFormElement>)=>{}
 
                             <div className="form-div">
                                 <label htmlFor="uploader">Carregar Currículo</label>
-                                <FileUploader onFileSelect={handleFileSelect} />
+                                {/* <FileUploader onFileSelect={handleFileSelect} /> */}
                             </div>
 
                             <button className="primary-button" type="submit">

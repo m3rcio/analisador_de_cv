@@ -2,7 +2,7 @@ import React from 'react';
 
 const FileUploader=()=>{
     return(
-        <div>juyjyu</div>
+        <div className="w-full gradient-Border">FileUploader</div>
     )
 }
 

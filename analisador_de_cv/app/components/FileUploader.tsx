@@ -22,7 +22,7 @@ const FileUploader=()=>{
             <div {...getRootProps()}>
                 <input {...getInputProps()} />
                 <div className='space-y-4 cursor-pointer'>
-                    <div>
+                    <div className='mx-auto w-16 h-16 flex items-center justify-center'>
                         <img src='/icons/info.svg' alt='upload' className='size-20'></img>
                     </div>
                 </div>

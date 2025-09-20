@@ -29,7 +29,7 @@ const FileUploader=()=>{
                     </div>
                     {
                         file ? (<div></div>):
-                        (<div></div>)
+                        (<div><p className='text-lg text-gray-500'><span className='font-semibold'>Clique Para Carregar</span>Ou Arraste e Solte</p><p className='text-lg text-gray-500'>PDF (max 20MB)</p></div>)
                     }
                 </div>
             </div>

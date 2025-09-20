@@ -18,7 +18,16 @@ const FileUploader=()=>{
         maxSize: maxFileSize,
     })
     return(
-        <div className="w-full gradient-border">FileUploader</div>
+        <div className="w-full gradient-border">
+            <div {...getRootProps()}>
+                <input {...getInputProps()} />
+                <div className='space-y-4 cursor-pointer'>
+                    <div>
+                        <img src='/icons/info.svg' alt='upload' className='size-20'></img>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {useCallback} from 'react';
 import {useDropzone} from 'react-dropzone';
 
@@ -10,6 +10,8 @@ const FileUploader=()=>{
 
         onFileSelect?.(file);
     }, [onFileSelect]);
+
+    const [file,setFile]= useState();
 
     const {getRootProps, getInputProps, isDragActive, acceptedFiles} = useDropzone({
         onDrop,
@@ -25,6 +27,10 @@ const FileUploader=()=>{
                     <div className='mx-auto w-16 h-16 flex items-center justify-center'>
                         <img src='/icons/info.svg' alt='upload' className='size-20'></img>
                     </div>
+                    {
+                        file ? (<div></div>):
+                        (<div></div>)
+                    }
                 </div>
             </div>
         </div>

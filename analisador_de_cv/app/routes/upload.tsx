@@ -6,7 +6,12 @@ import FileUploader from "~/components/FileUploader";
 const Upload=()=>{
 const [isProcessing,setIsProcessing]= useState();
 const [statusText,setStatusText]= useState('');
-const handleSubmit=(e: FormEvent<HTMLFormElement>)=>{}
+const [file,setFile]= useState<File | null>(null);
+// const handleSubmit=(e: FormEvent<HTMLFormElement>)=>{}
+
+const handleFileSelect= (file: File | null)=>{
+    setFile[file]
+}
 
     return(
         <main className="bg-[url('/imagens/bg-main.svg')] bg-cover">
@@ -40,7 +45,7 @@ const handleSubmit=(e: FormEvent<HTMLFormElement>)=>{}
 
                             <div className="form-div">
                                 <label htmlFor="uploader">Carregar Currículo</label>
-                                {/* <FileUploader onFileSelect={handleFileSelect} /> */}
+                                <FileUploader onFileSelect={handleFileSelect}/>
                             </div>
 
                             <button className="primary-button" type="submit">

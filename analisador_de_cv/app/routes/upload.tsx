@@ -10,7 +10,7 @@ const [file,setFile]= useState<File | null>(null);
 // const handleSubmit=(e: FormEvent<HTMLFormElement>)=>{}cecewdewdewdew
 
 const handleFileSelect= (file: File | null)=>{
-    setFile[file]
+    // setFile[file]
 }
 
     return(
@@ -19,7 +19,7 @@ const handleFileSelect= (file: File | null)=>{
 
             <section className="main-section">
                 <div className="page-heading py-16">
-                    <h1>Feedback para o seu Emprego de cdscdscdsfewfew</h1>
+                    <h1>Feedback para o seu Emprego de sonho!</h1>
                     {isProcessing ? (
                         <>
                             <h2>{statusText}</h2>

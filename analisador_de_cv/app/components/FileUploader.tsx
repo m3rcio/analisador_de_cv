@@ -19,7 +19,7 @@ const FileUploader=({onFileSelect}:FileUploaderProps)=>{
         onDrop,
         multiple: false,
         accept: { 'application/pdf': ['.pdf']},
-        maxSize: maxFileSize,
+        // maxSize: maxFileSize,
     })
     return(
         <div className="w-full gradient-border">
@@ -31,7 +31,7 @@ const FileUploader=({onFileSelect}:FileUploaderProps)=>{
                     </div>
                     {
                         file ? (<div></div>):
-                        (<div><p className='text-lg text-gray-500'><span className='font-semibold'>Clique Para Carregarrrrr</span>Ou Arraste e Solte</p><p className='text-lg text-gray-500'>PDF (max 20MB)</p></div>)
+                        (<div><p className='text-lg text-gray-500'><span className='font-semibold'>Clique Para Carregar</span>Ou Arraste e Solte</p><p className='text-lg text-gray-500'>PDF (max 20MB)</p></div>)
                     }
                 </div>
             </div>

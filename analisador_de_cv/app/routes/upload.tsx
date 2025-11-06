@@ -7,7 +7,7 @@ const Upload=()=>{
 const [isProcessing,setIsProcessing]= useState();
 const [statusText,setStatusText]= useState('');
 const [file,setFile]= useState<File | null>(null);
-// const handleSubmit=(e: FormEvent<HTMLFormElement>)=>{}cecewdewdewdewesfewfewfew
+const handleSubmit=(e: FormEvent<HTMLFormElement>)=>{}
 
 const handleFileSelect= (file: File | null)=>{
     // setFile[file]
